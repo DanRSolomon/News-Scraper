@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="button">
+    <button id="new-scrape" type="button">Scrape Articles</button>
+  </div>
+  <div class="row">
+    {{!-- <h1>THIS IS A TEST!!</h1> --}}
+    {{#if allArticles}}
+      {{#each allArticles}}
+        <div id="wrapper">
+          <a href="{{this.link}}" target="_blank">
+            <h2>{{this.title}}</h2>
+          </a>
+          <h4>{{this.summary}}</h4>
+        </div>
+      {{/each}}
+    {{/if}}
+    {{#unless allArticles}}
+      <h1>There are currently no articles!</h1>
+    {{/unless}}
+  </div>
+</div>
